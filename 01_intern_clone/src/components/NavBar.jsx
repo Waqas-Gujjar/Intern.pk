@@ -53,6 +53,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
+      <hr />
     </>
   );
 };
