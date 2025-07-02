@@ -3,6 +3,7 @@ import image from '../../assets/images/Group.png';
 import Collaborated from './Collaborated';
 import { FaArrowRight } from "react-icons/fa";
 import Internsection from './Internsection';
+import Portfolio from './Portfolio';
 
 
 
@@ -45,6 +46,7 @@ const Home = () => {
         </div>
         <Collaborated />
         <Internsection />
+        <Portfolio />
         </>
     );
 };

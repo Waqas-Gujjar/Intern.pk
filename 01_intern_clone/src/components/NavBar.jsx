@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../assets/images/logo.png';
 import profile from '../assets/images/profile_image.png';
 import { LuMoonStar } from 'react-icons/lu';
+import { LuSunDim } from "react-icons/lu";
 
 const NavBar = () => {
-  // Simulate current page (replace with real route check)
-  const currentPage = 'Home'; // you can use useLocation().pathname
+  const currentPage = 'Home'; // Replace with useLocation() in real routing
+
+  const [theme, setTheme] = useState('dark');
+
+  // Apply theme class to <html>
+  useEffect(() => {
+    const root = document.documentElement;
+    if (theme === 'dark') {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  };
 
   return (
     <>
@@ -38,6 +54,7 @@ const NavBar = () => {
               Dashboard
             </button>
           </div>
+
           <div className="flex gap-4 items-center">
             <div className="relative group">
               <img
@@ -45,11 +62,16 @@ const NavBar = () => {
                 src={profile}
                 alt="Profile"
               />
-              {/* Optional overlay or animation elements can go here */}
             </div>
-            <i className="text-gray-300 bg-[#27272a] p-3 rounded-full cursor-pointer">
-              <LuMoonStar size={'25px'} />
-            </i>
+
+            {/* Theme Toggle Icon */}
+            <button
+              onClick={toggleTheme}
+              className="text-gray-300 bg-[#27272a] p-3 rounded-full cursor-pointer transition"
+              title="Toggle Theme"
+            >
+              {theme === 'dark' ? <LuSunDim className='text-yellow-400' size={25} /> : <LuMoonStar size={25} />}
+            </button>
           </div>
         </div>
       </div>
