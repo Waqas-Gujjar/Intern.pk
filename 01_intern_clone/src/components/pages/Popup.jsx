@@ -8,7 +8,7 @@ const Popup = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 1000);
+    }, 1000); // 1 second delay
 
     return () => clearTimeout(timer);
   }, []);
@@ -20,10 +20,10 @@ const Popup = () => {
   return (
     <>
       {showPopup && (
-        <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex justify-center items-center">
+        <div className="fixed inset-0 z-[9999] bg-black/40 backdrop-blur-sm flex justify-center items-center animate-fade-in">
           <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden max-w-4xl w-[90%]">
 
-            {/* Image + Text + Close Button */}
+            {/* Image Section */}
             <div className="relative w-full">
               <img
                 src={popup}
@@ -31,22 +31,22 @@ const Popup = () => {
                 className="w-full object-cover max-h-[570px]"
               />
 
-              {/* Close button on top-right */}
+              {/* Close Icon */}
               <button
                 onClick={handleClose}
                 className="absolute top-4 right-4 bg-green-500 hover:bg-green-600 text-white p-1 rounded-full"
               >
-                <IoMdClose className='cursor-pointer'    size={20} />
+                <IoMdClose size={20} />
               </button>
 
-              {/* Text + CTA Button over image */}
+              {/* Text + CTA */}
               <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-white/90 px-6 py-4 rounded-xl shadow-md text-center">
                 <p className="text-lg font-medium text-black mb-2">
-                  We are the winner of <span className="text-green-600 font-bold">Google Cloud for Startup 2024</span>
+                  We are the winner of <span className="text-green-600 font-bold">Google Cloud for Startups 2024</span>
                 </p>
                 <button
                   onClick={handleClose}
-                  className="bg-[#42a824] hover:bg-green-700 text-white px-6 py-2 rounded-full transition"
+                  className="bg-[#42a824] hover:bg-green-700 text-white px-6 py-2 cursor-pointer rounded-full transition"
                 >
                   Close
                 </button>
