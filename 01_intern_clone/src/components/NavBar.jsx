@@ -6,10 +6,9 @@ import { LuSunDim } from "react-icons/lu";
 
 const NavBar = () => {
   const currentPage = 'Home'; // Replace with useLocation() in real routing
-
   const [theme, setTheme] = useState('dark');
+  const [shineClass, setShineClass] = useState('');
 
-  // Apply theme class to <html>
   useEffect(() => {
     const root = document.documentElement;
     if (theme === 'dark') {
@@ -21,6 +20,15 @@ const NavBar = () => {
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  };
+
+  // Handlers for shine animation
+  const handleMouseEnter = () => {
+    setShineClass('shine-down');
+  };
+
+  const handleMouseLeave = () => {
+    setShineClass('shine-up');
   };
 
   return (
@@ -56,18 +64,24 @@ const NavBar = () => {
           </div>
 
           <div className="flex gap-4 items-center">
-            <div className="relative group">
+            {/* Profile Image with Vertical Shine Effect */}
+            <div
+              className="relative group w-10 h-10 overflow-hidden rounded-full cursor-pointer"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
               <img
-                className="w-8 h-8 rounded-full cursor-pointer transition-all duration-300 group-hover:animate-shine"
+                className="w-full h-full object-cover rounded-full"
                 src={profile}
                 alt="Profile"
               />
+              <span className={`shine-vertical absolute inset-0 rounded-full ${shineClass}`} />
             </div>
 
             {/* Theme Toggle Icon */}
             <button
               onClick={toggleTheme}
-              className="text-gray-300 bg-[#27272a] p-3 rounded-full cursor-pointer transition"
+              className="text-gray-300 bg-[#27272a] p-3 rounded-full cursor-pointer transition bg-opacity-90 hover:bg-[#3a3a3a]"
               title="Toggle Theme"
             >
               {theme === 'dark' ? <LuSunDim className='text-yellow-400' size={25} /> : <LuMoonStar size={25} />}
