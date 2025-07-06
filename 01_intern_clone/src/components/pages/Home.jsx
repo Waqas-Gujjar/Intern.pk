@@ -7,6 +7,8 @@ import Portfolio from './Portfolio';
 import TechSection from './TechSection';
 import Career from './Career';
 import MockInterviews from './MockInterviews';
+import Work from './Work';
+import AiCareer from './AiCareer';
 
 const Home = () => {
   return (
@@ -71,6 +73,14 @@ const Home = () => {
 
       <div className="relative z-20">
         <MockInterviews />
+      </div>
+
+      <div className="relative z-20">
+        <Work />
+      </div>
+
+      <div className="relative z-20">
+        <AiCareer />
       </div>
     </>
   );
