@@ -10,7 +10,8 @@ import MockInterviews from './MockInterviews';
 import Work from './Work';
 import AiCareer from './AiCareer';
 import Coach from './Coach';
-  
+import Review from './Review';
+
 const Home = () => {
   return (
     <>
@@ -86,6 +87,10 @@ const Home = () => {
 
       <div className="relative z-20">
         <Coach />
+      </div>
+
+      <div className="relative z-20">
+        <Review />
       </div>
     </>
   );

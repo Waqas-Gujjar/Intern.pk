@@ -69,7 +69,7 @@ const Coach = () => {
 
         {/* Monetize Section */}
         <div className="sm:col-span-2 mt-20">
-          <div className="flex flex-col justify-center bg-[#1e1e1e] p-10 rounded-2xl items-center w-full">
+          <div className="flex flex-col justify-center bg-[#1e1e1e] p-15 rounded-2xl items-center w-full">
             <div className="bg-[#222c1f] rounded-2xl px-6 py-2 flex items-center gap-2">
               <FiDollarSign size={20} className="text-[#42a824]" />
               <p className="text-[#42a824] font-semibold">Monetize Your Expertise</p>
@@ -77,7 +77,7 @@ const Coach = () => {
             <h1 className="text-gray-200 text-3xl md:text-4xl font-semibold mt-7 text-center">
               Share Your Knowledge & Earn
             </h1>
-            <p className="text-gray-300 mt-6 font-semibold text-center leading-relaxed">
+            <p className="text-gray-300 mt-8 mb-20 font-semibold text-center leading-relaxed">
               Are you an AI expert? Share your knowledge through courses, tutorials, or content.  
               Build your personal <br /> brand and generate income while helping others succeed in their AI careers.
             </p>
