@@ -5,6 +5,7 @@ import machine from "../../../assets/images/machine.jpg";
 import frontend from "../../../assets/images/frontend.png";
 import backend from "../../../assets/images/BackendDevelopment.jpg";
 import mobile from "../../../assets/images/mobile-app.jpg";
+import InternShipCard from './InternShipCard';
 
 const internships = [
   { title: "Graphic Design", image: graphic },
@@ -50,26 +51,7 @@ const Internship = () => {
         </div>
 
         {/* Cards Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-          {internships.map((intern, index) => (
-            <div
-              key={index}
-              className="bg-[#111111] border border-white rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-            >
-              <img
-                src={intern.image}
-                alt={intern.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold mb-4">{intern.title}</h3>
-                <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-15 cursor-pointer rounded-2xl">
-                  Apply Now
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
+       <InternShipCard />
       </div>
     </div>
   );
