@@ -1,5 +1,5 @@
 import React from 'react';
-import { LuUserCheck, LuFileText, LuRocket } from 'react-icons/lu';
+// import { LuUserCheck, LuFileText, LuRocket } from 'react-icons/lu';
 
 const steps = [
   {
@@ -63,7 +63,7 @@ const Work = () => {
       {/* Button Below Steps */}
       {/* Button Below Steps */}
 <div className='flex items-center justify-center ml-28 -mt-10 mb-12'>
-  <button className='bg-[#41a223] text-white text-lg font-semibold px-10 py-5 rounded-3xl hover:bg-green-700 transition'>
+  <button className='bg-[#41a223] text-white text-lg font-semibold px-10 py-5 rounded-3xl hover:bg-green-700 transition cursor-pointer'>
     Get Started Now
   </button>
 </div>

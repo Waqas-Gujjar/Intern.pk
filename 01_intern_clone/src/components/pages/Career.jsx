@@ -162,10 +162,10 @@
                 Join our <span className="font-semibold text-white">virtual internships</span> program and transform your career prospects with hands-on experience and expert guidance.
               </p>
               <div className="flex justify-center gap-4 flex-wrap">
-                <button className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-xl flex items-center gap-2">
+                <button className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-xl flex items-center gap-2 cursor-pointer">
                   Explore Opportunities <FaArrowRight />
                 </button>
-                <button className="bg-[#2a2a2a] hover:bg-[#3a3a3a] text-white font-semibold px-6 py-3 rounded-xl flex items-center gap-2">
+                <button className="bg-[#2a2a2a] hover:bg-[#3a3a3a] text-white font-semibold px-6 py-3 rounded-xl flex items-center gap-2 cursor-pointer">
                   View Programs <FaArrowRight />
                 </button>
               </div>

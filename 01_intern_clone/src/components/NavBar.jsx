@@ -28,7 +28,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center bg-[#121212] px-[3rem] py-3 w-full">
+      <div className="fixed top-0 left-0 right-0 z-50 flex justify-between border-b border-gray-800  items-center bg-[#121212] px-[3rem] py-3 w-full">
         {/* Logo */}
         <div className="logo">
           <Link to="/">
@@ -87,20 +87,20 @@ const NavBar = () => {
           {/* Buttons */}
           <div className="gap-4 flex">
             <Link to="/job-portal">
-              <button className="bg-[#42a824] text-white px-4 py-2 rounded-xl hover:bg-black border border-green-600">
+              <button className="bg-[#42a824] text-white px-4 py-2 rounded-xl hover:bg-black border border-green-600 cursor-pointer">
                 Job Portal
               </button>
             </Link>
 
             {isLoggedIn ? (
               <Link to="/dashboard">
-                <button className="text-white px-4 py-2 rounded-xl hover:bg-[#42a824] border border-green-600">
+                <button className="text-white px-4 py-2 rounded-xl hover:bg-[#42a824] border border-green-600 cursor-pointer">
                   Dashboard
                 </button>
               </Link>
             ) : (
               <Link to="/signup">
-                <button className="text-white px-4 py-2 rounded-xl hover:bg-[#42a824] border border-green-600">
+                <button className="text-white px-4 py-2 rounded-xl hover:bg-[#42a824] border border-green-600 cursor-pointer">
                   Sign Up
                 </button>
               </Link>

@@ -90,7 +90,7 @@ const Review = () => {
             Of Learners Achieving <br />
             Their Dreams
           </h1>
-          <button className="mt-10 bg-[#42a824] text-white px-7 py-4 text-lg rounded-xl font-semibold hover:bg-green-700 transition">
+          <button className="mt-10 bg-[#42a824] text-white px-7 py-4 text-lg rounded-xl font-semibold hover:bg-green-700 transition cursor-pointer">
             Join Our Community
           </button>
         </div>
@@ -147,10 +147,10 @@ const Review = () => {
               experience, and earn a valuable certificate.
             </p>
             <div className='flex gap-10 mb-20'>
-              <button className='bg-[#42a824] text-white px-6 py-2 text-lg rounded-xl font-semibold hover:bg-green-700 transition mt-2'>
+              <button className='bg-[#42a824] text-white px-6 py-2 text-lg rounded-xl font-semibold hover:bg-green-700 transition mt-2 cursor-pointer'>
                 Get Started Now
               </button>
-              <button className='text-white px-10 border-2 py-2 text-lg rounded-xl flex gap-2 font-semibold hover:text-black hover:bg-[#ffffff] transition mt-2'>
+              <button className='text-white px-10 border-2 py-2 text-lg rounded-xl flex gap-2 font-semibold hover:text-black hover:bg-[#ffffff] transition mt-2 cursor-pointer'>
                 <IoSearch className='text-2xl' />
                 Explore Internships
               </button>

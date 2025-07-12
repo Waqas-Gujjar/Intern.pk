@@ -48,7 +48,7 @@ const TechSection = () => {
           Create in Your Native Language & Start Earning
         </p>
 
-        <button className='bg-[#43a724] text-white text-xl font-semibold px-6 py-3 rounded-2xl hover:bg-[#2e8e1a] transition-colors mt-4'>
+        <button className='bg-[#43a724] text-white text-xl font-semibold px-6 py-3 rounded-2xl hover:bg-[#2e8e1a] transition-colors mt-4 cursor-pointer'>
           Start Teaching Today
         </button>
       </div>

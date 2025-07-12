@@ -34,7 +34,7 @@ const Popup = () => {
               {/* Close Icon */}
               <button
                 onClick={handleClose}
-                className="absolute top-4 right-4 bg-green-500 hover:bg-green-600 text-white p-1 rounded-full"
+                className="absolute top-4 right-4 cursor-pointer bg-green-500 hover:bg-green-600 text-white p-1 rounded-full"
               >
                 <IoMdClose size={20} />
               </button>
