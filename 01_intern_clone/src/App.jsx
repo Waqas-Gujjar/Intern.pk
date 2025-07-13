@@ -13,6 +13,13 @@ import JobPortal from './components/User/JobPotal';
 import HealthCareExplore from './components/pages/NavlinkPage/page/HealthCareExplore';
 import EngineeringExplore from './components/pages/NavlinkPage/page/EngineeringExplore';
 import ItExplorePage from './components/pages/NavlinkPage/page/ItExplorePage';
+import OtherInternship from './components/internshippage/OtherInternship';
+import Chatbot from './components/internshippage/Chatbot';
+import Backend from './components/internshippage/Backend';
+import MobileApp from './components/internshippage/MobileApp';
+import GraphicDesign  from './components/internshippage/GraphicDesign';
+
+import FrontEnd from './components/internshippage/FrontEnd';
 
 import Footer from './components/Footer';
 
@@ -53,6 +60,14 @@ const App = () => {
         <Route path="/signup" element={<MainLayout><Signup /></MainLayout>} />
         <Route path="/dashboard" element={<MainLayout><Dashboard /></MainLayout>} />
         <Route path="/job-portal" element={<MainLayout><JobPortal /></MainLayout>} />
+        <Route path='/chatbot-internship' element={<MainLayout> <Chatbot /></MainLayout>} />
+        <Route path='/Other-Internship' element={<MainLayout> <OtherInternship /></MainLayout>} />
+        <Route path='/Backend-internship' element={<MainLayout> <Backend /></MainLayout>} />
+        <Route path='/FrontEnd-internship' element={<MainLayout> <FrontEnd /></MainLayout>} />
+        <Route path='/MobileApp-internship' element={<MainLayout> <MobileApp /></MainLayout>} />
+        <Route path='/GraphicDesign-internship' element={<MainLayout> <GraphicDesign /></MainLayout>} />
+       
+      
         
         {/* Explore pages with only navbar */}
         <Route path="/healthcare-explore" element={<NavOnlyLayout><HealthCareExplore /></NavOnlyLayout>} />
