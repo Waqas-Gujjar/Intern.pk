@@ -18,6 +18,7 @@ import Chatbot from './components/internshippage/Chatbot';
 import Backend from './components/internshippage/Backend';
 import MobileApp from './components/internshippage/MobileApp';
 import GraphicDesign  from './components/internshippage/GraphicDesign';
+import Form from './components/Form.jsx';
 
 import FrontEnd from './components/internshippage/FrontEnd';
 
@@ -66,6 +67,8 @@ const App = () => {
         <Route path='/FrontEnd-internship' element={<MainLayout> <FrontEnd /></MainLayout>} />
         <Route path='/MobileApp-internship' element={<MainLayout> <MobileApp /></MainLayout>} />
         <Route path='/GraphicDesign-internship' element={<MainLayout> <GraphicDesign /></MainLayout>} />
+        <Route path="/Form" element={<MainLayout><Form /></MainLayout>} />
+
        
       
         

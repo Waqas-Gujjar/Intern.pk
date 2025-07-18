@@ -1,9 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // ← Import this
+
 import mern from "../../assets/images/image/backend/mean.png";
 import mernstack from "../../assets/images/image/backend/mern.png";
 import php from "../../assets/images/image/backend/php.png";
 import web from "../../assets/images/image/backend/web3.png";
 import node from "../../assets/images/image/backend/nodejs.png";
+import Python from "../../assets/images/image/backend/download.jpeg";
 
 import { GrLocation } from "react-icons/gr";
 import { FaRegClock } from "react-icons/fa6";
@@ -39,9 +42,21 @@ const cards = [
     locationtype: "Remote",
     durationtype: "2 months",
   },
+  {
+    img: Python,
+    title: "Python Internship",
+    locationtype: "Remote",
+    durationtype: "2 months",
+  },
 ];
 
 const Backend = () => {
+  const navigate = useNavigate(); // ← Hook for navigation
+
+  const handleApplyClick = () => {
+    navigate("/Form"); // ← Navigate to form page
+  };
+
   return (
     <div className="mt-20 min-h-screen bg-black">
       {/* Header */}
@@ -88,7 +103,10 @@ const Backend = () => {
               </p>
               <p className="text-gray-400 text-sm mt-1">Internship</p>
 
-              <button className="mt-auto w-full h-10 cursor-pointer bg-green-700 text-white font-bold rounded-xl hover:bg-green-800 transition">
+              <button
+                onClick={handleApplyClick} // ← Add click handler
+                className="mt-auto w-full h-10 cursor-pointer bg-green-700 text-white font-bold rounded-xl hover:bg-green-800 transition"
+              >
                 Apply Now
               </button>
             </div>
