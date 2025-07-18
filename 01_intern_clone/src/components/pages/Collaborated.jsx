@@ -14,7 +14,7 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.2, // smooth delay between each image
+      staggerChildren: 0.2,
     },
   },
 };
@@ -40,7 +40,7 @@ const Collaborated = () => {
       </div>
 
       <motion.div
-        className="flex justify-center items-center pt-6 gap-20 flex-wrap bg-black overflow-x-hidden"
+        className="flex justify-center items-center pt-6 gap-12 flex-wrap bg-black overflow-x-hidden px-4 sm:px-10"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -51,7 +51,7 @@ const Collaborated = () => {
             key={index}
             src={img}
             alt={`Partner ${index + 1}`}
-            className="w-[8rem] h-auto object-contain"
+            className="w-20 sm:w-32 md:w-36 lg:w-40 h-auto object-contain"
             custom={index}
             variants={imageVariants}
           />

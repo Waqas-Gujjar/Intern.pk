@@ -16,43 +16,43 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="h-screen w-full flex items-center">
-        <div className="flex w-full justify-between items-center">
+      <div className="min-h-screen w-full flex flex-col lg:flex-row items-center justify-center px-6 md:px-12">
+        <div className="flex flex-col-reverse lg:flex-row w-full justify-between items-center gap-12">
 
           {/* Left Side */}
-          <div className="w-1/2 px-18 space-y-6 pr-12">
-            <div className='space-y-6 mt-20'>
-              <h1 className="text-7xl font-bold text-white leading-[4.7rem]">
+          <div className="w-full lg:w-1/2 space-y-6">
+            <div className='space-y-6 mt-10 md:mt-20 text-center lg:text-left'>
+              <h1 className="text-4xl md:text-6xl xl:text-7xl font-bold text-white leading-tight md:leading-[4.7rem]">
                 Looking for <br />
                 <span className="text-[#42a824]">Dream internship?</span>
               </h1>
 
-              <p className="text-lg 2xl:text-xl text-gray-200 md:w-10/12">
+              <p className="text-base md:text-lg xl:text-xl text-gray-200 md:w-10/12 mx-auto lg:mx-0">
                 Internee.pk kickstarts students' tech careers with first internships, providing industry exposure,
                 practical skills, and networking opportunities.
               </p>
             </div>
 
             {/* Buttons */}
-            <div className="flex gap-4 pt-4">
-              <button className="flex items-center gap-2 bg-[#42a824] text-xl hover:bg-green-700 cursor-pointer text-white px-8 py-4 rounded-2xl font-semibold">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
+              <button className="flex items-center justify-center gap-2 bg-[#42a824] text-lg md:text-xl hover:bg-green-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl font-semibold transition-all">
                 Our Job Portal
               </button>
-              <button className="bg-[#1e2536] flex justify-between items-center gap-2 hover:bg-gray-500 cursor-pointer text-white px-10 py-4 rounded-2xl text-xl font-semibold transition">
+              <button className="bg-[#1e2536] flex items-center justify-center gap-2 hover:bg-gray-600 text-white px-6 md:px-10 py-3 md:py-4 rounded-2xl text-lg md:text-xl font-semibold transition-all">
                 Dashboard
-                <FaArrowRight size={20} className='text-white rounded-full' />
+                <FaArrowRight size={18} className='text-white' />
               </button>
             </div>
           </div>
 
           {/* Right Side */}
-          <div className="w-1/2 pt-24">
-            <img src={image} alt="Internship illustration" className="w-[42rem] h-auto object-contain" />
+          <div className="w-full lg:w-1/2 flex justify-center pt-10 lg:pt-24">
+            <img src={image} alt="Internship illustration" className="w-full max-w-[26rem] md:max-w-[36rem] xl:max-w-[42rem] h-auto object-contain" />
           </div>
         </div>
       </div>
 
-      {/* Sections with spacing */}
+      {/* Other Sections */}
       <div className="mt-20">
         <Collaborated />
       </div>
@@ -61,11 +61,11 @@ const Home = () => {
         <Internsection />
       </div>
 
-      <div className=" relative z-10">
+      <div className="relative z-10">
         <Portfolio />
       </div>
 
-      <div className=" relative z-20">
+      <div className="relative z-20">
         <TechSection />
       </div>
 

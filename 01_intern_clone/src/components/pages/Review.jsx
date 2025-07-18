@@ -6,7 +6,6 @@ import image4 from '../../assets/images/image4.jpg';
 import { IoSearch } from "react-icons/io5";
 import { useInView } from 'react-intersection-observer';
 
-// Counter animation component
 const AnimatedCounter = ({ target, start = 0, duration = 2000 }) => {
   const [count, setCount] = useState(start);
   const [ref, inView] = useInView({ triggerOnce: true });
@@ -80,23 +79,19 @@ const Review = () => {
   return (
     <div className="bg-[#0c0c0c] py-10 px-6">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-14">
-        {/* Left Section */}
         <div className="lg:w-1/2">
           <div className="bg-[#1f2937] w-max px-5 py-1 rounded-full">
             <p className="text-gray-300 text font-medium">Trusted By Thousands</p>
           </div>
-          <h1 className="text-white text-5xl  leading-snug mt-6">
-            Join a Global Community <br />
-            Of Learners Achieving <br />
-            Their Dreams
+          <h1 className="text-white text-4xl md:text-5xl leading-snug mt-6">
+            Join a Global Community <br /> Of Learners Achieving <br /> Their Dreams
           </h1>
           <button className="mt-10 bg-[#42a824] text-white px-7 py-4 text-lg rounded-xl font-semibold hover:bg-green-700 transition cursor-pointer">
             Join Our Community
           </button>
         </div>
 
-        {/* Right Section */}
-        <div className="w-[480px] relative h-[400px] overflow-hidden mr-20 flex justify-center items-center">
+        <div className="w-full max-w-md relative h-[400px] overflow-hidden flex justify-center items-center">
           <div
             className={`absolute transition-all duration-500 ease-in-out w-full px-10 py-5 rounded-2xl bg-white shadow-lg text-center ${
               animate ? 'translate-x-full opacity-0' : 'translate-x-0 opacity-100'
@@ -118,8 +113,7 @@ const Review = () => {
             </div>
           </div>
 
-          {/* Dots */}
-          <div className="absolute mt-78 flex justify-center gap-2">
+          <div className="absolute bottom-0 flex justify-center gap-2">
             {testimonials.map((_, index) => (
               <span
                 key={index}
@@ -132,58 +126,54 @@ const Review = () => {
         </div>
       </div>
 
-      {/* Explore Section */}
-      <div className='flex flex-col justify-center items-center mt-28 h-full rounded-2xl ml-20 mr-20 bg-[#0a1733]'>
+      <div className='flex flex-col justify-center items-center mt-28 h-full rounded-2xl mx-4 md:mx-20 bg-[#0a1733]'>
         <div className='mt-20 flex flex-col justify-center items-center'>
           <div className='bg-[#ffffff] rounded-full font-semibold flex justify-center items-center px-2 py-1 text-sm'>
             <span className='text-[#ffffff] px-4 bg-[#000000] p-1 rounded-full'>Trending</span>
             <h1 className='text-[#000000] ml-5'>Explore Internships Opportunities</h1>
           </div>
-          <div className='text-white text-5xl flex flex-col mt-12 items-center leading-snug'>
-            <h1>Unlock New Opportunities <br />
-              With Top-tier Internships.</h1>
-            <p className='text-gray-400 text-lg mt-10 leading-relaxed text-center'>
-              Take the first step toward a successful career with Internee.pk. Explore top internships, gain hands-on <br />
+          <div className='text-white text-3xl md:text-5xl flex flex-col mt-12 items-center leading-snug text-center'>
+            <h1>Unlock New Opportunities <br /> With Top-tier Internships.</h1>
+            <p className='text-gray-400 text-base md:text-lg mt-10 leading-relaxed'>
+              Take the first step toward a successful career with Internee.pk. Explore top internships, gain hands-on
               experience, and earn a valuable certificate.
             </p>
-            <div className='flex gap-10 mb-20'>
-              <button className='bg-[#42a824] text-white px-6 py-2 text-lg rounded-xl font-semibold hover:bg-green-700 transition mt-2 cursor-pointer'>
+            <div className='flex flex-col md:flex-row gap-6 mb-20 mt-6'>
+              <button className='bg-[#42a824] text-white px-6 py-2 text-lg rounded-xl font-semibold hover:bg-green-700 transition cursor-pointer'>
                 Get Started Now
               </button>
-              <button className='text-white px-10 border-2 py-2 text-lg rounded-xl flex gap-2 font-semibold hover:text-black hover:bg-[#ffffff] transition mt-2 cursor-pointer'>
-                <IoSearch className='text-2xl' />
-                Explore Internships
+              <button className='text-white px-10 border-2 py-2 text-lg rounded-xl flex items-center justify-center gap-2 font-semibold hover:text-black hover:bg-[#ffffff] transition cursor-pointer'>
+                <IoSearch className='text-2xl' /> Explore Internships
               </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Animated Stats Section */}
-      <div className='flex justify-between items-center mt-20 mx-20 ml-60 mr-60'>
+      <div className='flex flex-col md:flex-row justify-center items-center gap-10 mt-20 mx-6 md:mx-20'>
         <div className='flex flex-col justify-center items-center'>
-          <h1 className='text-white text-6xl font-bold'>
+          <h1 className='text-white text-4xl md:text-6xl font-bold'>
             <AnimatedCounter target={20} start={1} />
           </h1>
-          <p className='text-gray-400 text-lg text-center'>Expert-Led Internships</p>
+          <p className='text-gray-400 text-base md:text-lg text-center'>Expert-Led Internships</p>
         </div>
 
-        <div className="h-16 w-1 border-l border-gray-400"></div>
+        <div className="hidden md:block h-16 w-1 border-l border-gray-400"></div>
 
         <div className='flex flex-col justify-center items-center'>
-          <h1 className='text-white text-6xl font-bold'>
+          <h1 className='text-white text-4xl md:text-6xl font-bold'>
             <AnimatedCounter target={1500} start={100} />
           </h1>
-          <p className='text-gray-400 text-lg text-center'>Successful Graduates</p>
+          <p className='text-gray-400 text-base md:text-lg text-center'>Successful Graduates</p>
         </div>
 
-        <div className="h-16 w-1 border-l border-gray-400"></div>
+        <div className="hidden md:block h-16 w-1 border-l border-gray-400"></div>
 
         <div className='flex flex-col justify-center items-center'>
-          <h1 className='text-white text-6xl font-bold'>
+          <h1 className='text-white text-4xl md:text-6xl font-bold'>
             <AnimatedCounter target={50000} start={1000} />
           </h1>
-          <p className='text-gray-400 text-lg text-center'>LinkedIn Followers</p>
+          <p className='text-gray-400 text-base md:text-lg text-center'>LinkedIn Followers</p>
         </div>
       </div>
     </div>

@@ -34,22 +34,22 @@ const GraduateProgram = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-black text-white w-full mt-30 px-6 lg:px-20 py-16 flex justify-center text-center flex-col items-center gap-10">
+    <div className="bg-black text-white w-full mt-30 px-4 sm:px-6 lg:px-20 py-16 flex justify-center text-center flex-col items-center gap-10 max-w-[1400px] mx-auto">
       {/* Header */}
-      <div className="flex flex-col gap-5">
-        <h1 className="text-6xl font-bold">Graduate Programs</h1>
-        <p className="text-gray-200 text-lg">
+      <div className="flex flex-col gap-5 max-w-3xl">
+        <h1 className="text-5xl sm:text-6xl font-bold">Graduate Programs</h1>
+        <p className="text-gray-200 text-base sm:text-lg leading-relaxed">
           Explore our comprehensive graduate programs designed to advance your career and <br /> expand your knowledge.
         </p>
       </div>
 
       {/* Section Title */}
       <div className="mt-10">
-        <h3 className="text-3xl font-semibold">Explore Categories</h3>
+        <h3 className="text-2xl sm:text-3xl font-semibold">Explore Categories</h3>
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-6">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mt-6 w-full px-2 sm:px-0">
         {categories.map((category, index) => (
           <motion.div
             key={index}
@@ -58,22 +58,22 @@ const GraduateProgram = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
-            className="relative flex flex-col gap-5 bg-[#111] p-5 rounded-2xl shadow-lg hover:shadow-green-500/30 transition-all duration-300 cursor-pointer"
+            className="relative flex flex-col gap-4 bg-[#111] p-5 rounded-2xl shadow-lg hover:shadow-green-500/30 transition-all duration-300 cursor-pointer"
           >
             {/* Image */}
             <img
               src={category.image}
               alt={category.title}
-              className="w-full h-56 object-cover rounded-xl"
+              className="w-full h-48 sm:h-56 object-cover rounded-xl"
             />
 
             {/* Title */}
-            <h3 className="text-2xl font-semibold hover:text-green-400 transition-colors duration-300">
+            <h3 className="text-xl sm:text-2xl font-semibold hover:text-green-400 transition-colors duration-300">
               {category.title}
             </h3>
 
             {/* Description */}
-            <p className="text-gray-300 text-base">{category.description}</p>
+            <p className="text-gray-300 text-sm sm:text-base leading-relaxed">{category.description}</p>
 
             {/* Glow Light Effect Under Card */}
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-[80%] h-[4px] bg-green-500/30 blur-lg rounded-full"></div>

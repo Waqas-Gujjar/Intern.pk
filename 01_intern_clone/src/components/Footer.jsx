@@ -12,7 +12,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#121212]  text-white px-6 py-10">
+    <footer className="bg-[#121212]  text-white px-20 sm:10 py-10">
       {/* Newsletter */}
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10 mx-10">
         <div>

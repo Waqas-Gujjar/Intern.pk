@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // ← Import this
+import { useNavigate } from "react-router-dom";
 
 import mern from "../../assets/images/image/backend/mean.png";
 import mernstack from "../../assets/images/image/backend/mern.png";
@@ -51,61 +51,54 @@ const cards = [
 ];
 
 const Backend = () => {
-  const navigate = useNavigate(); // ← Hook for navigation
+  const navigate = useNavigate();
 
   const handleApplyClick = () => {
-    navigate("/Form"); // ← Navigate to form page
+    navigate("/Form");
   };
 
   return (
-    <div className="mt-20 min-h-screen bg-black">
+    <div className="min-h-screen bg-black py-20 px-4">
       {/* Header */}
-      <div className="flex bg-[#004207] mt-26 p-24 rounded-2xl mx-20 justify-center items-center text-center">
-        <h3 className="text-white text-5xl font-bold">Backend Development</h3>
+      <div className="bg-[#004207] rounded-2xl mx-auto max-w-6xl py-12 px-6 text-center">
+        <h3 className="text-white text-3xl md:text-5xl font-bold">Backend Development</h3>
       </div>
 
       {/* Title */}
-      <div className="flex flex-col mt-16 items-center justify-center">
-        <h1 className="text-4xl text-[#43a724] font-bold">
+      <div className="text-center mt-16 px-4">
+        <h1 className="text-3xl md:text-4xl text-[#43a724] font-bold">
           Explore Your Next Internship
         </h1>
-        <p className="text-white text-lg mt-2">
+        <p className="text-white text-base md:text-lg mt-2">
           Handpicked opportunities to elevate your career.
         </p>
       </div>
 
       {/* Cards */}
-      <div className="rounded-2xl flex flex-wrap justify-between p-20 border-white gap-10">
+      <div className="flex flex-wrap justify-center gap-10 mt-16 max-w-7xl mx-auto">
         {cards.map((card, index) => (
           <div
             key={index}
-            className="border border-white w-[380px] rounded-2xl flex flex-col relative transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg bg-[#121212] min-h-[500px]"
+            className="bg-[#121212] border border-white w-full sm:w-[300px] md:w-[360px] rounded-2xl overflow-hidden shadow-md hover:shadow-green-600/40 transition-transform hover:scale-105 duration-300 flex flex-col"
           >
-            {/* Image */}
-            <div className="flex justify-center">
-              <img
-                src={card.img}
-                alt={card.title}
-                className="w-full h-70 object-contain bg-[#121212] p-4 rounded-t-2xl"
-              />
-            </div>
-
-            {/* Content */}
+            <img
+              src={card.img}
+              alt={card.title}
+              className="w-full h-60 object-contain bg-black p-4"
+            />
             <div className="p-5 flex flex-col flex-grow">
               <h2 className="text-white text-2xl font-bold">{card.title}</h2>
-              <p className="text-white text-sm mt-2 flex items-center gap-1">
-                <GrLocation size={20} className="text-green-500 mr-1" />
-                {card.locationtype}
+              <p className="text-white text-sm mt-3 flex items-center">
+                <GrLocation className="text-green-500 mr-2" /> {card.locationtype}
               </p>
-              <p className="text-white text-sm mt-2 flex items-center gap-1">
-                <FaRegClock size={20} className="text-blue-500 mr-1" />
-                {card.durationtype}
+              <p className="text-white text-sm mt-2 flex items-center">
+                <FaRegClock className="text-blue-500 mr-2" /> {card.durationtype}
               </p>
               <p className="text-gray-400 text-sm mt-1">Internship</p>
 
               <button
-                onClick={handleApplyClick} // ← Add click handler
-                className="mt-auto w-full h-10 cursor-pointer bg-green-700 text-white font-bold rounded-xl hover:bg-green-800 transition"
+                onClick={handleApplyClick}
+                className="w-full h-10 bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition duration-300 mt-6"
               >
                 Apply Now
               </button>

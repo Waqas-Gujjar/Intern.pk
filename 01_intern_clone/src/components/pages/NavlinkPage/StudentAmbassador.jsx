@@ -76,8 +76,9 @@ const StudentAmbassador = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="w-full mt-[-9rem] relative  h-screen ">
-        <div className="bg-[#1e1e1e] ml-25 flex flex-col items-start h-[60rem]   mr-5 px-8 py-6   rounded-xl shadow-lg">
+      <div className="w-full mt-[-9rem] relative h-screen">
+        {/* Hide this whole section on small screens, show md+ */}
+        <div className="hidden md:flex bg-[#1e1e1e] ml-25 flex-col items-start h-[60rem] mr-5 px-8 py-6 rounded-xl shadow-lg">
           <h1 className="text-white text-xl font-semibold">
             Become a Student Ambassador
           </h1>
@@ -97,19 +98,19 @@ const StudentAmbassador = () => {
 
           {/* Add more content here */}
 
-          <div className="mt-69 absolute flex ml-50 ">
+          <div className="mt-69 absolute flex ml-50">
             <img
               src={photo}
               alt="photo"
-              className="h-140  object-cover rounded-xl"
+              className="h-140 object-cover rounded-xl"
             />
           </div>
-          <div className="flex h-[17.5rem] relative rounded-2xl p-8 items-start justify-center w-[34rem] top-76  left-115 bg-black flex-col">
-            <div className="w-[28rem]  ">
+          <div className="flex h-[17.5rem] relative rounded-2xl p-8 items-start justify-center w-[34rem] top-76 left-115 bg-black flex-col">
+            <div className="w-[28rem]">
               <h1 className="text-6xl text-white font-bold">
                 Unlock Your Potential
               </h1>
-              <p className="text-gray-300 text-lg font-semibold   mt-6 ">
+              <p className="text-gray-300 text-lg font-semibold mt-6">
                 Discover new opportunities and enhance your skills. Gain
                 real-world experience with hands-on projects. Connect with a
                 network of like-minded individuals.
@@ -118,6 +119,7 @@ const StudentAmbassador = () => {
           </div>
         </div>
       </div>
+
       {/* card */}
 
       <div className="top-[16.6rem] justify-between bg-black cursor-pointer gap-10 items-center px-6 py-12 relative flex flex-wrap">
@@ -147,11 +149,11 @@ const StudentAmbassador = () => {
 
         {/* Card Section */}
         <div className="text-white relative mb-6 px-15">
-          <div className="flex justify-between gap-6   items-center ">
+          <div className="flex justify-between gap-6 items-center">
             {card.map((car, index) => (
               <div
                 key={index}
-                className="bg-[#202020] w-[30rem] px-8 py-6 shadow-md flex flex-col "
+                className="bg-[#202020] w-[30rem] px-8 py-6 shadow-md flex flex-col"
               >
                 <div className="mb-4 text-[#43a724]">{car.icon}</div>
                 <h4 className="text-2xl font-semibold mb-3">{car.title}</h4>

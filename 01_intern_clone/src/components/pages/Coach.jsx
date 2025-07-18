@@ -5,7 +5,6 @@ import { RiLightbulbFlashLine } from 'react-icons/ri';
 import { LuTrophy } from "react-icons/lu";
 import { BsStars } from "react-icons/bs";
 
-
 const Coach = () => {
   const cards = [
     {
@@ -50,7 +49,7 @@ const Coach = () => {
 
   return (
     <div className="bg-[#121212] py-20 px-6">
-      {/* First Section */}
+      {/* Top 4 Cards */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-14">
         {cards.map((card, index) => (
           <div
@@ -67,9 +66,9 @@ const Coach = () => {
           </div>
         ))}
 
-        {/* Monetize Section */}
+        {/* Monetization Section */}
         <div className="sm:col-span-2 mt-20">
-          <div className="flex flex-col justify-center bg-[#1e1e1e] p-15 rounded-2xl items-center w-full">
+          <div className="flex flex-col justify-center bg-[#1e1e1e] px-8 py-16 rounded-2xl items-center w-full">
             <div className="bg-[#222c1f] rounded-2xl px-6 py-2 flex items-center gap-2">
               <FiDollarSign size={20} className="text-[#42a824]" />
               <p className="text-[#42a824] font-semibold">Monetize Your Expertise</p>
@@ -79,18 +78,17 @@ const Coach = () => {
             </h1>
             <p className="text-gray-300 mt-8 mb-20 font-semibold text-center leading-relaxed">
               Are you an AI expert? Share your knowledge through courses, tutorials, or content.  
-              Build your personal <br /> brand and generate income while helping others succeed in their AI careers.
+              Build your personal <br className="hidden md:block" /> brand and generate income while helping others succeed in their AI careers.
             </p>
           </div>
         </div>
       </div>
 
-      {/* Why Choose Section Title */}
+      {/* Why Choose Section */}
       <div className='flex justify-center items-center mt-28 mb-10'>
         <h1 className='text-white text-4xl font-semibold text-center'>Why Choose AI Career Coach?</h1>
       </div>
 
-      {/* Why Choose Cards */}
       <div className="max-w-7xl mt-20 justify-center items-center mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {whyChoose.map((item, index) => (
           <div
