@@ -1,12 +1,38 @@
-# React + Vite
+# 💬 Random Quote Generator App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautifully designed React app that fetches and displays a random inspirational quote using the [FreeAPI](https://api.freeapi.app/api/v1/public/quotes/quote/random). Built using **React**, **TailwindCSS**, and **Axios**, the app features a clean glassmorphism UI with animations and responsive design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 📜 Fetches random quotes with author
+- 🎨 Stylish modern UI (glassmorphism, fade-in animations)
+- ⚙️ Built using React, TailwindCSS, and Axios
+- 🔁 Refresh quotes dynamically
+- 🌐 Fully responsive design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🖼️ Preview
+
+![App Screenshot](screenshot.png)
+
+---
+
+## 📦 Tech Stack
+
+- React
+- Tailwind CSS
+- Axios
+- FreeAPI for random quotes
+
+---
+
+## 🔧 Installation
+
+```bash
+git clone https://github.com/your-username/random-quote-generator.git
+cd random-quote-generator
+npm install
+npm start
