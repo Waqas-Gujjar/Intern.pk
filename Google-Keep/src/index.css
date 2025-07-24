@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+
+.text{
+  font-weight: 4px  ;
+  font-size: 15px;
+   font-family:  "Roboto", sans-serif;
+}
+
+.input-text{
+  font-weight: 20px  ;
+  font-size: 11px;
+  font-family:  "Roboto", sans-serif;
+}
+
+.inertext{
+  font-weight: 20px  ;
+  font-size: 9.5px;
+  font-family:  "Roboto", sans-serif;
+}
